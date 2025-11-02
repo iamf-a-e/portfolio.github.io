@@ -28,7 +28,7 @@
  */
 
 :root {
-    --theme-red: #ef3724;
+    --theme-red: #4bff3b;
     --theme-blue: #2960f7;
     --theme-green: #8cc63f;
     --theme-orange: #fd7e14;
@@ -337,7 +337,7 @@ a:hover, a:active {
 }
 
 .bg-theme-red {
-    background-color: #ef3724 !important;
+    background-color: #4bff3b !important;
 }
 
 .bg-theme-blue {
@@ -357,7 +357,7 @@ a:hover, a:active {
 }
 
 .fg-theme-red {
-    color: #ef3724 !important;
+    color: #4bff3b !important;
 }
 
 .fg-theme-blue {
@@ -1118,63 +1118,63 @@ a:hover, a:active {
 
 /* Theme red */
 .theme-red .bg-theme {
-    background-color: #EF3724 !important;
+    background-color: #4bff3b !important;
 }
 
 .theme-red .fg-theme {
-    color: #EF3724 !important;
+    color: #4bff3b !important;
 }
 
 .theme-red .btn-theme {
-    background-color: #EF3724;
+    background-color: #4bff3b;
     color: #fff;
 }
 
 .theme-red .btn-theme:hover {
-    background-color: #F04936;
+    background-color: #04440a;
     color: #fff;
 }
 
 .theme-red .btn-theme:focus {
-    box-shadow: 0 0 0 3px #fff, 0 0 0 5px #EF3724;
+    box-shadow: 0 0 0 3px #fff, 0 0 0 5px #4bff3b;
 }
 
 .theme-red .btn-theme-outline {
-    color: #EF3724;
-    box-shadow: 0 0 0 2px #EF3724;
+    color: #4bff3b;
+    box-shadow: 0 0 0 2px #4bff3b;
 }
 
 .theme-red .btn-theme-outline:hover {
-    background-color: #EF3724;
+    background-color: #4bff3b;
     color: #fff;
 }
 
 .theme-red .btn-theme-outline:focus {
-    background-color: #EF3724;
+    background-color: #4bff3b;
     color: #fff;
-    box-shadow: 0 0 0 3px #fff, 0 0 0 5px #EF3724;
+    box-shadow: 0 0 0 3px #fff, 0 0 0 5px #4bff3b;
 }
 
 .theme-red .btn-fab {
-    background-color: #EF3724;
+    background-color: #4bff3b;
     color: #fff;
 }
 
 .theme-red .btn-fab:hover {
-    background-color: #F04936;
+    background-color: #04440a;
     color: #fff;
 }
 
 .theme-red .progress {
-    box-shadow: 0 0 0 2px #EF3724;
+    box-shadow: 0 0 0 2px #4bff3b;
 }
 
 .theme-red .progress-bar {
-    background-color: #EF3724;
+    background-color: #4bff3b;
 }
 
 .theme-red .theme-list li::before {
-    border-color: #EF3724;
+    border-color: #4bff3b;
 }
 
 

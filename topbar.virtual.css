@@ -113,8 +113,8 @@
 
 .page-home .badge {
   padding: 16px 24px;
-  background-color: rgba(239, 56, 36, 0.15);
-  color: #EF3724;
+  background-color: rgba(9, 56, 3, 0.15);
+  color: #4bff3b;
   text-shadow: 0 2px 4px rgba(23, 25, 37, 0.4);
   font-size: 16px;
   border-radius: 40px;
@@ -401,7 +401,7 @@
 
 .post-grid .post-category {
   font-weight: 500;
-  color: #EF3724;
+  color: #4bff3b;
   text-decoration: none;
 }
 
@@ -497,28 +497,28 @@
 /* Theme color style */
 /* Theme Red */
 .theme-red .badge-subhead {
-  background-color: rgba(239, 56, 36, 0.15);
-  color: #EF3724;
+  background-color: rgba(9, 56, 3, 0.15);
+  color: #4bff3b;
 }
 
 .theme-red .filterable-button .btn.selected,
 .theme-red .filterable-button .btn:focus {
-  background-color: #EF3724;
+  background-color: #4bff3b;
   color: #fff;
-  box-shadow: 0 0 0 2px #fff, 0 0 0 4px #EF3724;
+  box-shadow: 0 0 0 2px #fff, 0 0 0 4px #4bff3b;
 }
 
 .theme-red .page-about .img-place::before {
-  border-color: #EF3724;
+  border-color: #4bff3b;
 }
 
 .theme-red .timeline li:first-child .title {
-  background-color: #EF3724;
+  background-color: #4bff3b;
 }
 
 .theme-red .timeline li:first-child::before {
-  background-color: #EF3724;
-  box-shadow: 0 0 0 2px #EF3724;
+  background-color: #4bff3b;
+  box-shadow: 0 0 0 2px #4bff3b;
 }
 
 /* Theme Blue */

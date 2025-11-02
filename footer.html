@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Portfolio Footer</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #94a3b8;
+            --primary-dark: #4f46e5;
+            --text-light: #f8fafc;
+            --text-muted: #94a3b8;
+            --bg-dark: #0f172a;
+            --bg-darker: #020617;
+            --accent-color: #4bff3b;
+        }
+        
+        .modern-footer {
+            background: linear-gradient(135deg, var(--bg-dark) 0%, var(--bg-darker) 100%);
+            color: var(--text-light);
+            padding: 4rem 0 1.5rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .modern-footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--primary-color), transparent);
+        }
+        
+        .footer-title {
+            font-weight: 700;
+            font-size: 2.5rem;
+            background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+        
+        .footer-section {
+            margin-bottom: 2rem;
+        }
+        
+        .footer-section h5 {
+            color: var(--primary-color);
+            font-weight: 600;
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .footer-section h5::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 40px;
+            height: 2px;
+            background: var(--accent-color);
+        }
+        
+        .footer-section p, .footer-section li {
+            color: var(--text-muted);
+            margin-bottom: 0.5rem;
+        }
+        
+        .footer-section a {
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .footer-section a:hover {
+            color: var(--primary-color);
+            padding-left: 5px;
+        }
+        
+        .footer-section a::before {
+            content: '→';
+            position: absolute;
+            left: -15px;
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+        
+        .footer-section a:hover::before {
+            opacity: 1;
+            left: -10px;
+        }
+        
+        .contact-info li {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .contact-info i {
+            color: var(--primary-color);
+            width: 16px;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 1rem;
+        }
+        
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.05);
+            color: var(--text-muted);
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+        
+        .social-links a:hover {
+            background: var(--primary-color);
+            color: white;
+            transform: translateY(-3px);
+        }
+        
+        
+        
+        .subscribe-title {
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        
+        .subscribe-form {
+            display: flex;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        
+        .subscribe-form input[type="email"] {
+            flex: 1;
+            padding: 12px 15px;
+            border: none;
+            background: rgba(255, 255, 255, 0.07);
+            border-radius: 8px 0 0 8px;
+            color: var(--text-light);
+        }
+        
+        .subscribe-form input[type="email"]::placeholder {
+            color: var(--text-muted);
+        }
+        
+        .subscribe-form button {
+            background: #4bff3b;
+            color: white;
+            border: none;
+            padding: 0 25px;
+            border-radius: 0 8px 8px 0;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .subscribe-form button:hover {
+            background: #04440a;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 2rem;
+            margin-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+        
+        .copyright a {
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .copyright a:hover {
+            color: var(--accent-color);
+        }
+        
+        .heart {
+            color: #e74c3c;
+            animation: pulse 1.5s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .footer-title {
+                font-size: 2rem;
+            }
+            
+            .subscribe-form {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .subscribe-form input[type="email"],
+            .subscribe-form button {
+                border-radius: 8px;
+                width: 100%;
+            }
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            }
+
+            footer.modern-footer {
+            margin-top: auto;
+            }
+
+
+
+    </style>
+</head>
+<body>
+    <!-- Modern Footer -->
+    <footer class="modern-footer">
+        <div class="container">
+            <h1 class="footer-title">Tariro Munzwa's Portfolio</h1>
+            
+            <div class="row">
+                <div class="col-lg-4 footer-section">
+                    <h5>Where to find me</h5>
+                    <div class="contact-info">
+                        <p><i class="fas fa-map-marker-alt"></i> 707 Clee Drive, Prospect, Waterfalls, Harare</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 footer-section">
+                    <h5>Follow me</h5>
+                    <div class="social-links">
+                        <a href="https://github.com/iamf-a-e" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/tariro-munzwa-b57437186/" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>                        
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 footer-section">
+                    <h5>Contact me</h5>
+                    <ul class="list-unstyled contact-info">
+                        <li><i class="fas fa-envelope"></i> tarirofmunzwa@gmail.com</li>
+                        <li><i class="fas fa-phone"></i> +263 785 019 494</li>                        
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="subscribe-section">
+                <h3 class="subscribe-title">Stay Updated</h3>
+                <form class="subscribe-form">
+                    <input type="email" placeholder="Enter your email address" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+            
+            <div class="copyright">
+                <p>Copyright &copy; 2024. All rights reserved | This portfolio is made with <span class="heart">❤</span> by <a href="https://www.macodeid.com/">Tariro F. Munzwa</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
