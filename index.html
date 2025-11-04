@@ -84,7 +84,7 @@
     }
 
     .btn:hover {
-      background-color: #0056b3;
+      background-color: #4bff3b;
     }
 
     .btn-theme {
@@ -743,19 +743,19 @@
               </div>
             </li>
             <li>
-              <div class="title">contractor</div>
+              <div class="title">2025</div>
               <div class="details">
-                <h5>Built Environment Enterprises</h5>
-                <small class="fg-theme">IT Consultant</small>
-                <p>Built company website</p>
+                <h5>Contessasoft</h5>
+                <small class="fg-theme">Software Developer</small>
+                <p>Built software solutions for clients and pushed them to production.</p>
               </div>
             </li>
             <li>
-              <div class="title">2022-3</div>
+              <div class="title">2024</div>
               <div class="details">
-                <h5>Pick n Pay</h5>
-                <small class="fg-theme">Systems and Training Officer</small>
-                <p>Supported software systems and trained users on system use</p>
+                <h5>Built Environment Enterprises</h5>
+                <small class="fg-theme">IT Consultant</small>
+                <p>Built company website.</p>
               </div>
             </li>
           </ul>
@@ -773,7 +773,7 @@
           <div class="col-md-6 col-lg-4 wow fadeInUp">
             <div class="card card-body">
               <div class="iconic">
-                <span class="ti-layout"></span>
+                <span class="ti-layers"></span>
               </div>
               <h4 class="fg-theme">Web Design</h4>
               <p>As an experienced web designer, I would be honored to craft a compelling online presence for your business. With a keen eye for design and a deep understanding of user experience principles, I specialize in creating visually captivating...</p>
@@ -806,10 +806,10 @@ I welcome the opportunity to discuss how I can help you achieve your web design 
           <div class="col-md-6 col-lg-4 wow fadeInUp">
             <div class="card card-body">
               <div class="iconic">
-                <span class="ti-announcement"></span>
+                <span class="ti-layers"></span>
               </div>
               <h4 class="fg-theme">Software Development</h4>
-              <p>As an experienced software developer, I am passionate about crafting innovative and efficient solutions that drive business success. With a strong technical foundation and a keen eye for problem-solving...</p>
+              <p>As an experienced software developer, I am passionate about crafting innovative and efficient solutions that drive business success. With a strong technical foundation and a keen eye for problem-solving, I specialize in developing...</p>
               <a href="#" class="btn btn-theme btn-rounded" onclick="showDialog1('dialog-overlay-1')">Read More</a>
             </div>
           </div>
@@ -841,7 +841,7 @@ With a proven track record of successful project deliveries and satisfied client
           <div class="col-md-6 col-lg-4 wow fadeInUp">
             <div class="card card-body">
               <div class="iconic">
-                <span class="ti-desktop"></span>
+                <span class="ti-layers"></span>
               </div>
                 <h4 class="fg-theme">Web Development</h4>
               <p>As a skilled and versatile web developer, I bring a unique combination of technical expertise, creative vision, and a deep understanding of user experience to every project I undertake. With a strong foundation in modern web technologies...</p>
@@ -920,14 +920,14 @@ If you're seeking a web developer who can transform your online presence, elevat
       <div class="portfolio-tip-bubble">click pictures to visit work</div>
     </div>
 
-    <div class="filterable-button py-3 wow fadeInUp" data-toggle="selected">
+    <div id="work-filters" class="filterable-button py-3 wow fadeInUp" data-toggle="selected">
       <button class="btn btn-theme-outline selected" data-filter="*">All</button>
       <button class="btn btn-theme-outline" data-filter=".apps">Apps</button>
       <button class="btn btn-theme-outline" data-filter=".websites">Websites</button>
       <button class="btn btn-theme-outline" data-filter=".chatbots">Chatbots</button>
     </div>
 
-    <div class="gridder my-3">
+    <div id="work-grid" class="gridder my-3">
 
       <!-- Website -->
       <div class="grid-item websites wow zoomIn">
@@ -1021,14 +1021,14 @@ If you're seeking a web developer who can transform your online presence, elevat
       <div class="portfolio-tip-bubble">click pictures to visit achievements</div>
     </div>
 
-    <div class="filterable-button py-3 wow fadeInUp" data-toggle="selected">
+    <div id="achievements-filters" class="filterable-button py-3 wow fadeInUp" data-toggle="selected">
       <button class="btn btn-theme-outline selected" data-filter="*">All</button>
       <button class="btn btn-theme-outline" data-filter=".awards">Awards</button>
       <button class="btn btn-theme-outline" data-filter=".publications">Publications</button>
       <button class="btn btn-theme-outline" data-filter=".spotlights">Spotlights</button>
     </div>
 
-    <div class="gridder my-3">
+    <div id="achievements-grid" class="gridder my-3">
 
       <!-- DS4Health Award -->
       <div class="grid-item awards wow zoomIn">
@@ -1096,12 +1096,13 @@ If you're seeking a web developer who can transform your online presence, elevat
       <div class="portfolio-tip-bubble">click pictures to visit certifications</div>
     </div>
 
-    <div class="filterable-button py-3 wow fadeInUp" data-toggle="selected">
+    <div id="certifications-filters" class="filterable-button py-3 wow fadeInUp" data-toggle="selected">
       <button class="btn btn-theme-outline selected" data-filter="*">All</button>
       <button class="btn btn-theme-outline" data-filter=".ai">AI</button>
+      <button class="btn btn-theme-outline" data-filter=".participation">Participation</button>
     </div>
 
-    <div class="gridder my-3">
+    <div id="certifications-grid" class="gridder my-3">
 
       <!-- Certification -->
       <div class="grid-item ai wow zoomIn">
@@ -1112,6 +1113,17 @@ If you're seeking a web developer who can transform your online presence, elevat
           <div class="img-caption">
             <h5 class="fg-theme">Google AI Essentials</h5>
             <p>AI Certification</p>
+          </div>
+        </div>
+      </div>
+      <div class="grid-item participation wow zoomIn">
+        <div class="img-place">
+          <a href="https://www.dropbox.com/scl/fi/j0f7efmf9rq64v4sd5zt1/Tariro_Munzwa_Certificate.pdf?rlkey=t9sywk463j3cznck1o2ap4i0x&st=uryhv5e4&dl=0" target="_blank">
+            <img src="participation.png" alt="Deep Learning Indaba" style="width:100%;height:300px;object-fit:cover;border-radius:8px;">
+          </a>
+          <div class="img-caption">
+            <h5 class="fg-theme">Deep Learning Indaba</h5>
+            <p>Participation Certificate</p>
           </div>
         </div>
       </div>
