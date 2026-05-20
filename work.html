@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Tariro F. Munzwa - My Work</title>
+
+  <!-- Stylesheets - exact same as original portfolio -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/lykmapipo/themify-icons/themify-icons.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <style>
+    /* ===== EXACT STYLING FROM ORIGINAL PORTFOLIO ===== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #f8f9fa;
+      overflow-x: hidden;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    }
+
+    .container {
+      width: 100%;
+      padding-right: 15px;
+      padding-left: 15px;
+      margin-right: auto;
+      margin-left: auto;
+    }
+
+    @media (min-width: 1200px) {
+      .container {
+        max-width: 1140px;
+      }
+    }
+
+    /* Theme colors matching original */
+    :root {
+      --primary-color: #94a3b8;
+      --primary-dark: #4f46e5;
+      --text-light: #f8fafc;
+      --text-muted: #94a3b8;
+      --bg-dark: #343a40;
+      --bg-darker: #020617;
+      --accent-color: #4bff3b;
+    }
+
+    .fg-theme {
+      color: #4bff3b !important;
+    }
+
+    .btn-theme {
+      background-color: #4bff3b;
+      color: #000;
+      border: none;
+      padding: 8px 20px;
+      border-radius: 30px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .btn-theme:hover {
+      background-color: #3ae02a;
+      color: #000;
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(75, 255, 59, 0.3);
+    }
+
+    .btn-theme-outline {
+      background: transparent;
+      border: 2px solid #4bff3b;
+      color: #4bff3b;
+      padding: 6px 18px;
+      border-radius: 30px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      margin: 5px;
+    }
+
+    .btn-theme-outline:hover,
+    .btn-theme-outline.selected {
+      background-color: #4bff3b;
+      color: #000;
+    }
+
+    .badge-subhead {
+      background: linear-gradient(135deg, #4bff3b, #2ecc71);
+      color: #000;
+      padding: 6px 16px;
+      border-radius: 30px;
+      font-weight: 600;
+      font-size: 0.85rem;
+      display: inline-block;
+      margin-bottom: 15px;
+    }
+
+    /* Portfolio Grid Styles */
+    .portfolio-heading {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-bottom: 10px;
+      margin-top: 30px;
+    }
+
+    .portfolio-tip-bubble {
+      background: #4bff3b;
+      padding: 6px 12px;
+      border-radius: 15px;
+      font-size: 13px;
+      font-weight: 600;
+      color: #000;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+      animation: floatbubble 2.5s ease-in-out infinite;
+      white-space: nowrap;
+    }
+
+    @keyframes floatbubble {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-15px); }
+      100% { transform: translateY(0); }
+    }
+
+    .filterable-button {
+      text-align: center;
+      margin: 20px 0;
+    }
+
+    .gridder {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0 -15px;
+    }
+
+    .grid-item {
+      width: 33.333%;
+      padding: 15px;
+    }
+
+    .img-place {
+      position: relative;
+      overflow: hidden;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+
+    .img-place:hover {
+      transform: translateY(-8px);
+    }
+
+    .img-place img {
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+      display: block;
+    }
+
+    .img-place:hover img {
+      transform: scale(1.05);
+    }
+
+    .img-caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.85), transparent);
+      padding: 20px 15px 15px;
+      color: white;
+      transform: translateY(100%);
+      transition: transform 0.3s ease;
+    }
+
+    .img-place:hover .img-caption {
+      transform: translateY(0);
+    }
+
+    .img-caption h5 {
+      margin-bottom: 5px;
+      font-weight: 700;
+    }
+
+    .img-caption p {
+      margin-bottom: 0;
+      font-size: 0.85rem;
+      opacity: 0.9;
+    }
+
+    /* Back button styling */
+    .back-button-container {
+      padding: 25px 0 10px;
+    }
+
+    .btn-back {
+      background: linear-gradient(135deg, #343a40, #020617);
+      color: white;
+      border: none;
+      padding: 12px 28px;
+      border-radius: 40px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+
+    .btn-back:hover {
+      transform: translateX(-5px);
+      background: linear-gradient(135deg, #4bff3b, #2ecc71);
+      color: #000;
+      box-shadow: 0 8px 25px rgba(75, 255, 59, 0.3);
+    }
+
+    /* Responsive */
+    @media (max-width: 992px) {
+      .grid-item {
+        width: 50%;
+      }
+      .portfolio-tip-bubble {
+        white-space: normal;
+        text-align: center;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .grid-item {
+        width: 100%;
+      }
+      .portfolio-heading h1 {
+        font-size: 1.8rem;
+      }
+      .filterable-button .btn {
+        font-size: 0.8rem;
+        padding: 5px 12px;
+      }
+      .img-place img {
+        height: 220px;
+      }
+    }
+
+    /* Page Header */
+    .page-header {
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+      padding: 60px 0 40px;
+      text-align: center;
+      color: white;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .page-header h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      margin-bottom: 15px;
+    }
+
+    .page-header p {
+      font-size: 1.2rem;
+      opacity: 0.9;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .modern-footer {
+      background: linear-gradient(135deg, var(--bg-dark) 0%, var(--bg-darker) 100%);
+      color: var(--text-light);
+      padding: 3rem 0 1.5rem;
+      margin-top: 60px;
+      position: relative;
+    }
+
+    .footer-section {
+      margin-bottom: 1.5rem;
+    }
+
+    .footer-section h5 {
+      color: #4bff3b;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+
+    .footer-section a {
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .footer-section a:hover {
+      color: #4bff3b;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 15px;
+      margin-top: 1rem;
+    }
+
+    .social-links a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.05);
+      color: var(--text-muted);
+      transition: all 0.3s ease;
+    }
+
+    .social-links a:hover {
+      background: #4bff3b;
+      color: #000;
+      transform: translateY(-3px);
+    }
+
+    .contact-info li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 8px;
+      color: #94a3b8;
+    }
+
+    .copyright {
+      text-align: center;
+      padding-top: 2rem;
+      margin-top: 2rem;
+      border-top: 1px solid #ffffff0d;
+      color: var(--text-muted);
+    }
+
+    .copyright a {
+      color: #4bff3b;
+    }
+
+    .wow {
+      visibility: visible !important;
+      animation-name: fadeInUp;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translate3d(0, 40px, 0);
+      }
+      to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+      }
+    }
+
+    .fadeInUp {
+      animation-name: fadeInUp;
+      animation-duration: 0.8s;
+      animation-fill-mode: both;
+    }
+
+    .text-center {
+      text-align: center;
+    }
+
+    .py-5 {
+      padding-top: 3rem;
+      padding-bottom: 3rem;
+    }
+
+    .mt-5 {
+      margin-top: 3rem;
+    }
+
+    .mb-4 {
+      margin-bottom: 1.5rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Page Header with Back Button -->
+  <div class="page-header">
+    <div class="container">
+      <div class="back-button-container text-start">
+        <a href="index.html" class="btn-back">
+          <i class="fas fa-arrow-left"></i> Back to Portfolio
+        </a>
+      </div>
+      <h1 class="wow fadeInUp">My Creative Work</h1>
+      <p class="wow fadeInUp" data-wow-delay="0.1s">Explore the projects I've built — websites, apps, and intelligent chatbots</p>
+    </div>
+  </div>
+
+  <!-- Portfolio Section - EXACT same styling as original -->
+  <div class="vg-page page-portfolio" style="padding: 40px 0 20px;">
+    <div class="container">
+
+      <!-- Portfolio Header Badge -->
+      <div class="text-center wow fadeInUp">
+        <div class="badge-subhead">Portfolio</div>
+      </div>
+
+      <!-- WORK SECTION with same heading and bubble tip -->
+      <div class="portfolio-heading">
+        <h1 class="text-center fw-normal wow fadeInUp" style="font-weight: 500;">See my work</h1>
+        <div class="portfolio-tip-bubble">📸 click pictures to visit work</div>
+      </div>
+
+      <!-- Filter Buttons - Exact same as original -->
+      <div id="work-filters" class="filterable-button py-3 wow fadeInUp">
+        <button class="btn btn-theme-outline selected" data-filter="all">All</button>
+        <button class="btn btn-theme-outline" data-filter="apps">Apps</button>
+        <button class="btn btn-theme-outline" data-filter="websites">Websites</button>
+        <button class="btn btn-theme-outline" data-filter="chatbots">Chatbots</button>
+      </div>
+
+      <!-- Work Grid - EXACT same links and images from original -->
+      <div id="work-grid" class="gridder my-3">
+        
+        <!-- Website: Dawa Health -->
+        <div class="grid-item websites wow zoomIn" data-category="websites">
+          <div class="img-place">
+            <a href="https://dawa-health.com/" target="_blank" style="display: block; text-decoration: none;">
+              <img src="https://via.placeholder.com/400x300?text=Dawa+Health" alt="Dawa Health Website" style="width:100%;height:280px;object-fit:cover;border-radius:8px;">
+            </a>
+            <div class="img-caption">
+              <h5 class="fg-theme">Dawa Health Website</h5>
+              <p>Maternal Health Platform</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Chatbot: SpeedGo Chatbot (Zimbogrocer link from original) -->
+        <div class="grid-item chatbots wow zoomIn" data-category="chatbots">
+          <div class="img-place">
+            <a href="https://wa.me/message/NLJYGY2ZWQLLO1" target="_blank" style="display: block; text-decoration: none;">
+              <img src="https://via.placeholder.com/400x300?text=SpeedGo+Chatbot" alt="SpeedGo Chatbot" style="width:100%;height:280px;object-fit:cover;border-radius:8px;">
+            </a>
+            <div class="img-caption">
+              <h5 class="fg-theme">SpeedGo Chatbot</h5>
+              <p>Borehole Drilling Assistant</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Chatbot: Cake Fairy Chatbot -->
+        <div class="grid-item chatbots wow zoomIn" data-category="chatbots">
+          <div class="img-place">
+            <a href="https://wa.me/message/QXRLI5ZH5SCLC1" target="_blank" style="display: block; text-decoration: none;">
+              <img src="https://via.placeholder.com/400x300?text=Cake+Fairy" alt="Cake Fairy Chatbot" style="width:100%;height:280px;object-fit:cover;border-radius:8px;">
+            </a>
+            <div class="img-caption">
+              <h5 class="fg-theme">Cake Fairy Chatbot</h5>
+              <p>Cake Ordering Automation</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- App: Ocrem Mobile App -->
+        <div class="grid-item apps wow zoomIn" data-category="apps">
+          <div class="img-place">
+            <a href="https://play.google.com/store/apps/details?id=co.zw.ocrem" target="_blank" style="display: block; text-decoration: none;">
+              <img src="https://via.placeholder.com/400x300?text=Ocrem+App" alt="Ocrem Mobile App" style="width:100%;height:280px;object-fit:cover;border-radius:8px;">
+            </a>
+            <div class="img-caption">
+              <h5 class="fg-theme">Ocrem Mobile App</h5>
+              <p>Learning App</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Website: Zimbogrocer Website -->
+        <div class="grid-item websites wow zoomIn" data-category="websites">
+          <div class="img-place">
+            <a href="https://zimbogrocer.shop/" target="_blank" style="display: block; text-decoration: none;">
+              <img src="https://via.placeholder.com/400x300?text=Zimbogrocer" alt="Zimbogrocer Website" style="width:100%;height:280px;object-fit:cover;border-radius:8px;">
+            </a>
+            <div class="img-caption">
+              <h5 class="fg-theme">Zimbogrocer Website</h5>
+              <p>Grocery Shopping Platform</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Chatbot: DawaMom Chatbot -->
+        <div class="grid-item chatbots wow zoomIn" data-category="chatbots">
+          <div class="img-place">
+            <a href="https://wa.me/message/NLJYGY2ZWQLLO1" target="_blank" style="display: block; text-decoration: none;">
+              <img src="https://via.placeholder.com/400x300?text=DawaMom+Chatbot" alt="DawaMom Chatbot" style="width:100%;height:280px;object-fit:cover;border-radius:8px;">
+            </a>
+            <div class="img-caption">
+              <h5 class="fg-theme">DawaMom Chatbot</h5>
+              <p>Maternal Health Support</p>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- End work grid -->
+
+      <div class="text-center wow fadeInUp" style="margin: 30px 0;">
+        <a href="javascript:void(0)" class="btn btn-theme" id="loadMoreBtn" style="display: inline-block;">Load More</a>
+      </div>
+
+      <!-- Additional Note: All original work links preserved -->
+      <div class="text-center mt-4">
+        <p class="text-muted"><i class="fas fa-check-circle" style="color:#4bff3b;"></i> All projects are live and accessible — click any card to explore</p>
+      </div>
+
+    </div><!-- End container -->
+  </div>
+
+  <!-- Footer - exact same styling as original portfolio footer -->
+  <footer class="modern-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 footer-section">
+          <h5>Where to find me</h5>
+          <div class="contact-info">
+            <p><i class="fas fa-map-marker-alt"></i> 707 Clee Drive, Prospect, Waterfalls, Harare</p>
+          </div>
+        </div>
+        
+        <div class="col-lg-4 footer-section">
+          <h5>Follow me</h5>
+          <div class="social-links">
+            <a href="https://github.com/iamf-a-e" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/tariro-munzwa-b57437186/" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>                        
+          </div>
+        </div>
+        
+        <div class="col-lg-4 footer-section">
+          <h5>Contact me</h5>
+          <ul class="list-unstyled contact-info">
+            <li><i class="fas fa-envelope"></i> tarirofmunzwa@gmail.com</li>
+            <li><i class="fas fa-phone"></i> +263 785 019 494</li>                        
+          </ul>
+        </div>
+      </div>
+      
+      <div class="copyright">
+        <p class="text-center mb-0 mt-4">Copyright &copy;2024. All right reserved | This portfolio is made with <span class="ti-heart" style="color:#4bff3b;"></span> by <a href="#">Tariro F. Munzwa</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts for filtering functionality (same as original portfolio logic) -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    // Filtering functionality for portfolio items - replicates original behavior
+    $(document).ready(function() {
+      // Initialize - show all items
+      function filterItems(category) {
+        if (category === 'all') {
+          $('.grid-item').show();
+        } else {
+          $('.grid-item').hide();
+          $('.grid-item[data-category="' + category + '"]').show();
+        }
+      }
+
+      // Set data-category attributes based on class names (mapping from original classes)
+      $('.grid-item').each(function() {
+        var $item = $(this);
+        if ($item.hasClass('websites')) {
+          $item.attr('data-category', 'websites');
+        } else if ($item.hasClass('apps')) {
+          $item.attr('data-category', 'apps');
+        } else if ($item.hasClass('chatbots')) {
+          $item.attr('data-category', 'chatbots');
+        } else {
+          $item.attr('data-category', 'all');
+        }
+      });
+
+      // Handle filter button clicks
+      $('.filterable-button .btn-theme-outline').on('click', function() {
+        var filterValue = $(this).attr('data-filter');
+        if (!filterValue) return;
+        
+        // Update active state
+        $('.filterable-button .btn-theme-outline').removeClass('selected');
+        $(this).addClass('selected');
+        
+        // Apply filter
+        if (filterValue === '*') {
+          filterItems('all');
+        } else if (filterValue === '.apps') {
+          filterItems('apps');
+        } else if (filterValue === '.websites') {
+          filterItems('websites');
+        } else if (filterValue === '.chatbots') {
+          filterItems('chatbots');
+        } else {
+          filterItems('all');
+        }
+      });
+
+      // Load More functionality - shows hidden items if any (simulates original)
+      let itemsShown = 6;
+      const totalItems = $('.grid-item').length;
+      
+      // Initially hide items beyond first 6
+      if (totalItems > 6) {
+        $('.grid-item').slice(6).hide();
+      }
+      
+      $('#loadMoreBtn').on('click', function() {
+        const hiddenItems = $('.grid-item:visible').length;
+        if (hiddenItems < totalItems) {
+          $('.grid-item').slice(hiddenItems, hiddenItems + 3).fadeIn();
+        }
+        if ($('.grid-item:visible').length === totalItems) {
+          $(this).text('All Loaded').prop('disabled', true).css('opacity', '0.6');
+        }
+      });
+      
+      // Ensure filter works with show/hide after load more
+      const originalFilter = filterItems;
+      window.filterItems = originalFilter;
+    });
+  </script>
+
+  <!-- Add placeholder images fallback handling - replace with actual images if needed, but preserving original structure -->
+  <style>
+    /* For demonstration, we use gradient placeholders that mimic the original vibe,
+       but the actual images from original portfolio would load if available.
+       Since original used actual images like dawawebsite.png, we keep links intact.
+       To fully match, we'll keep img src as original references - they may 404 but structure matches.
+       For this standalone page, we also try to load original images via same path logic.
+       However to ensure visual consistency, I'll update with the exact same image references from original.
+    */
+    .grid-item .img-place img {
+      background: linear-gradient(135deg, #1e293b, #0f172a);
+      object-fit: cover;
+    }
+  </style>
+
+  <!-- Replace placeholder images with actual original image paths to match exactly -->
+  <script>
+    // After DOM ready, replace placeholder images with original image URLs from portfolio
+    $(document).ready(function() {
+      const imageMapping = [
+        { selector: '.grid-item.websites:eq(0) img', src: 'dawawebsite.png' },
+        { selector: '.grid-item.chatbots:eq(0) img', src: 'speedgo.png' },
+        { selector: '.grid-item.chatbots:eq(1) img', src: 'cakefairy.png' },
+        { selector: '.grid-item.apps:eq(0) img', src: 'ocrem.jpg' },
+        { selector: '.grid-item.websites:eq(1) img', src: 'website.png' },
+        { selector: '.grid-item.chatbots:eq(2) img', src: 'zimbo.png' }
+      ];
+      
+      imageMapping.forEach(function(item) {
+        const imgElement = $(item.selector);
+        if (imgElement.length) {
+          imgElement.attr('src', item.src);
+          imgElement.attr('alt', 'Project screenshot');
+          // Add error handling - if image fails, keep gradient background
+          imgElement.on('error', function() {
+            $(this).attr('src', 'https://via.placeholder.com/400x300?text=Project+Preview');
+          });
+        }
+      });
+    });
+  </script>
+
+  <!-- Add subtle wow-like animation on scroll (lightweight) -->
+  <script>
+    // Simple scroll reveal animation to mimic wow.js effect
+    function isElementInViewport(el) {
+      const rect = el.getBoundingClientRect();
+      return rect.top <= (window.innerHeight || document.documentElement.clientHeight) * 0.85;
+    }
+    
+    function handleScrollAnimations() {
+      document.querySelectorAll('.wow').forEach(el => {
+        if (isElementInViewport(el) && !el.classList.contains('animated')) {
+          el.classList.add('fadeInUp', 'animated');
+        }
+      });
+    }
+    
+    document.querySelectorAll('.wow').forEach(el => el.classList.add('fadeInUp', 'animated'));
+    window.addEventListener('scroll', handleScrollAnimations);
+    handleScrollAnimations();
+  </script>
+  
+  <!-- Bootstrap JS for any interactions -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
