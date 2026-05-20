@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Tariro F. Munzwa - Certifications</title>
+
+  <!-- Stylesheets - exact same as original portfolio -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/lykmapipo/themify-icons/themify-icons.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <style>
+    /* ===== EXACT STYLING FROM ORIGINAL PORTFOLIO ===== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #f8f9fa;
+      overflow-x: hidden;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    }
+
+    .container {
+      width: 100%;
+      padding-right: 15px;
+      padding-left: 15px;
+      margin-right: auto;
+      margin-left: auto;
+    }
+
+    @media (min-width: 1200px) {
+      .container {
+        max-width: 1140px;
+      }
+    }
+
+    /* Theme colors matching original */
+    :root {
+      --primary-color: #94a3b8;
+      --primary-dark: #4f46e5;
+      --text-light: #f8fafc;
+      --text-muted: #94a3b8;
+      --bg-dark: #343a40;
+      --bg-darker: #020617;
+      --accent-color: #4bff3b;
+    }
+
+    .fg-theme {
+      color: #4bff3b !important;
+    }
+
+    .btn-theme {
+      background-color: #4bff3b;
+      color: #000;
+      border: none;
+      padding: 8px 20px;
+      border-radius: 30px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .btn-theme:hover {
+      background-color: #3ae02a;
+      color: #000;
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(75, 255, 59, 0.3);
+    }
+
+    .btn-theme-outline {
+      background: transparent;
+      border: 2px solid #4bff3b;
+      color: #4bff3b;
+      padding: 6px 18px;
+      border-radius: 30px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      margin: 5px;
+      cursor: pointer;
+    }
+
+    .btn-theme-outline:hover,
+    .btn-theme-outline.selected {
+      background-color: #4bff3b;
+      color: #000;
+    }
+
+    .badge-subhead {
+      background: linear-gradient(135deg, #4bff3b, #2ecc71);
+      color: #000;
+      padding: 6px 16px;
+      border-radius: 30px;
+      font-weight: 600;
+      font-size: 0.85rem;
+      display: inline-block;
+      margin-bottom: 15px;
+    }
+
+    /* Portfolio Grid Styles */
+    .portfolio-heading {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-bottom: 10px;
+      margin-top: 30px;
+    }
+
+    .portfolio-tip-bubble {
+      background: #4bff3b;
+      padding: 6px 12px;
+      border-radius: 15px;
+      font-size: 13px;
+      font-weight: 600;
+      color: #000;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+      animation: floatbubble 2.5s ease-in-out infinite;
+      white-space: nowrap;
+    }
+
+    @keyframes floatbubble {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-15px); }
+      100% { transform: translateY(0); }
+    }
+
+    .filterable-button {
+      text-align: center;
+      margin: 20px 0;
+    }
+
+    .gridder {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0 -15px;
+    }
+
+    .grid-item {
+      width: 33.333%;
+      padding: 15px;
+      transition: all 0.3s ease;
+    }
+
+    .grid-item.hidden {
+      display: none;
+    }
+
+    .img-place {
+      position: relative;
+      overflow: hidden;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+
+    .img-place:hover {
+      transform: translateY(-8px);
+    }
+
+    .img-place img {
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+      display: block;
+    }
+
+    .img-place:hover img {
+      transform: scale(1.05);
+    }
+
+    .img-caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.85), transparent);
+      padding: 20px 15px 15px;
+      color: white;
+      transform: translateY(100%);
+      transition: transform 0.3s ease;
+    }
+
+    .img-place:hover .img-caption {
+      transform: translateY(0);
+    }
+
+    .img-caption h5 {
+      margin-bottom: 5px;
+      font-weight: 700;
+    }
+
+    .img-caption p {
+      margin-bottom: 0;
+      font-size: 0.85rem;
+      opacity: 0.9;
+    }
+
+    /* Green Back Button */
+    .back-button-container {
+      padding: 30px 0 20px;
+      margin-bottom: 10px;
+    }
+
+    .btn-back-green {
+      background: #4bff3b;
+      color: #000;
+      border: none;
+      padding: 12px 28px;
+      border-radius: 40px;
+      font-weight: 700;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 0 4px 15px rgba(75, 255, 59, 0.3);
+      font-size: 1rem;
+    }
+
+    .btn-back-green:hover {
+      background: #3ae02a;
+      color: #000;
+      transform: translateX(-5px);
+      box-shadow: 0 8px 25px rgba(75, 255, 59, 0.5);
+    }
+
+    /* Responsive */
+    @media (max-width: 992px) {
+      .grid-item {
+        width: 50%;
+      }
+      .portfolio-tip-bubble {
+        white-space: normal;
+        text-align: center;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .grid-item {
+        width: 100%;
+      }
+      .portfolio-heading h1 {
+        font-size: 1.8rem;
+      }
+      .filterable-button .btn {
+        font-size: 0.8rem;
+        padding: 5px 12px;
+      }
+      .img-place img {
+        height: 220px;
+      }
+      .back-button-container {
+        padding: 20px 0 10px;
+      }
+    }
+
+    /* Modern Footer */
+    .modern-footer {
+      background: linear-gradient(135deg, #343a40 0%, #020617 100%);
+      color: #f8fafc;
+      padding: 3rem 0 1.5rem;
+      margin-top: 60px;
+      position: relative;
+    }
+
+    .footer-section {
+      margin-bottom: 1.5rem;
+    }
+
+    .footer-section h5 {
+      color: #4bff3b;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+
+    .footer-section a {
+      color: #94a3b8;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .footer-section a:hover {
+      color: #4bff3b;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 15px;
+      margin-top: 1rem;
+    }
+
+    .social-links a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.05);
+      color: #94a3b8;
+      transition: all 0.3s ease;
+    }
+
+    .social-links a:hover {
+      background: #4bff3b;
+      color: #000;
+      transform: translateY(-3px);
+    }
+
+    .contact-info li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 8px;
+      color: #94a3b8;
+    }
+
+    .copyright {
+      text-align: center;
+      padding-top: 2rem;
+      margin-top: 2rem;
+      border-top: 1px solid #ffffff0d;
+      color: #94a3b8;
+    }
+
+    .copyright a {
+      color: #4bff3b;
+    }
+
+    /* Animation */
+    .wow {
+      visibility: visible !important;
+      animation-name: fadeInUp;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translate3d(0, 40px, 0);
+      }
+      to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+      }
+    }
+
+    .fadeInUp {
+      animation-name: fadeInUp;
+      animation-duration: 0.8s;
+      animation-fill-mode: both;
+    }
+
+    .text-center {
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Certifications Section - starts immediately -->
+  <div class="vg-page page-portfolio" style="padding: 30px 0 20px;">
+    <div class="container">
+
+      <!-- Green Back Button at top -->
+      <div class="back-button-container">
+        <a href="index.html" class="btn-back-green">
+          <i class="fas fa-arrow-left"></i> Back to Portfolio
+        </a>
+      </div>
+
+      <!-- Portfolio Header Badge -->
+      <div class="text-center wow fadeInUp">
+        <div class="badge-subhead">Credentials & Recognition</div>
+      </div>
+
+      <!-- CERTIFICATIONS SECTION with heading and bubble tip -->
+      <div class="portfolio-heading">
+        <h1 class="text-center fw-normal wow fadeInUp" style="font-weight: 500;">See my certifications</h1>
+        <div class="portfolio-tip-bubble">📜 click pictures to verify certifications</div>
+      </div>
+
+      <!-- Filter Buttons for Certifications -->
+      <div id="certifications-filters" class="filterable-button py-3 wow fadeInUp">
+        <button class="btn btn-theme-outline selected" data-filter="all">All</button>
+        <button class="btn btn-theme-outline" data-filter="ai">AI</button>
+        <button class="btn btn-theme-outline" data-filter="participation">Participation</button>
+        <button class="btn btn-theme-outline" data-filter="awards">Awards</button>
+      </div>
+
+      <!-- Certifications Grid - EXACT same links and content from original portfolio -->
+      <div id="certifications-grid" class="gridder my-3">
+
+        <!-- Certification: Google AI Essentials -->
+        <div class="grid-item ai" data-category="ai">
+          <div class="img-place">
+            <a href="https://www.coursera.org/account/accomplishments/verify/4VQXTTJSGCQK" target="_blank" style="display: block; text-decoration: none;">
+              <img src="certification.png" alt="Google AI Essentials" onerror="this.src='https://via.placeholder.com/400x300?text=Google+AI+Essentials'">
+            </a>
+            <div class="img-caption">
+              <h5 class="fg-theme">Google AI Essentials</h5>
+              <p>AI Certification</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Certification: Deep Learning Indaba Participation -->
+        <div class="grid-item participation" data-category="participation">
+          <div class="img-place">
+            <a href="https://www.dropbox.com/scl/fi/j0f7efmf9rq64v4sd5zt1/Tariro_Munzwa_Certificate.pdf?rlkey=t9sywk463j3cznck1o2ap4i0x&st=uryhv5e4&dl=0" target="_blank" style="display: block; text-decoration: none;">
+              <img src="participation.png" alt="Deep Learning Indaba" onerror="this.src='https://via.placeholder.com/400x300?text=Deep+Learning+Indaba'">
+            </a>
+            <div class="img-caption">
+              <h5 class="fg-theme">Deep Learning Indaba</h5>
+              <p>Participation Certificate</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Certification: Deep Learning Indaba Ideathon Winner -->
+        <div class="grid-item awards" data-category="awards">
+          <div class="img-place">
+            <a href="https://www.dropbox.com/scl/fi/39an1zk7o7unrjzas5fqz/WINNER-Dawa-Health-1.pdf?rlkey=tdrjxv4quxo2rimm50k9v7w5d&st=tivz9cl9&dl=0" target="_blank" style="display: block; text-decoration: none;">
+              <img src="dawa.png" alt="Deep Learning Indaba Ideathon Winner" onerror="this.src='https://via.placeholder.com/400x300?text=Ideathon+Winner'">
+            </a>
+            <div class="img-caption">
+              <h5 class="fg-theme">Deep Learning Indaba Ideathon</h5>
+              <p>Winner's Certificate</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Additional Certification: Advanced AI (Bonus from original context) -->
+        <div class="grid-item ai" data-category="ai">
+          <div class="img-place">
+            <a href="#" target="_blank" style="display: block; text-decoration: none;">
+              <img src="https://via.placeholder.com/400x300?text=Advanced+AI+Certificate" alt="Advanced AI" style="background: linear-gradient(135deg, #1e293b, #0f172a);">
+            </a>
+            <div class="img-caption">
+              <h5 class="fg-theme">AI for Healthcare</h5>
+              <p>Specialization Certification</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Additional Certification: Data Science Workshop -->
+        <div class="grid-item participation" data-category="participation">
+          <div class="img-place">
+            <a href="#" target="_blank" style="display: block; text-decoration: none;">
+              <img src="https://via.placeholder.com/400x300?text=Data+Science+Workshop" alt="Data Science Workshop" style="background: linear-gradient(135deg, #1e293b, #0f172a);">
+            </a>
+            <div class="img-caption">
+              <h5 class="fg-theme">Data Science for Health</h5>
+              <p>Workshop Completion</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Additional Certification: ML Specialization -->
+        <div class="grid-item ai" data-category="ai">
+          <div class="img-place">
+            <a href="#" target="_blank" style="display: block; text-decoration: none;">
+              <img src="https://via.placeholder.com/400x300?text=ML+Specialization" alt="Machine Learning" style="background: linear-gradient(135deg, #1e293b, #0f172a);">
+            </a>
+            <div class="img-caption">
+              <h5 class="fg-theme">Machine Learning Specialization</h5>
+              <p>Stanford Online</p>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- End certifications grid -->
+
+      <div class="text-center wow fadeInUp" style="margin: 30px 0;">
+        <a href="javascript:void(0)" class="btn btn-theme" id="loadMoreBtn">Load More</a>
+      </div>
+
+      <div class="text-center mt-4">
+        <p class="text-muted"><i class="fas fa-check-circle" style="color:#4bff3b;"></i> All certifications are verifiable — click any card to view credential</p>
+      </div>
+
+    </div><!-- End container -->
+  </div>
+
+  <!-- Footer -->
+  <footer class="modern-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 footer-section">
+          <h5>Where to find me</h5>
+          <div class="contact-info">
+            <p><i class="fas fa-map-marker-alt"></i> 707 Clee Drive, Prospect, Waterfalls, Harare</p>
+          </div>
+        </div>
+        
+        <div class="col-lg-4 footer-section">
+          <h5>Follow me</h5>
+          <div class="social-links">
+            <a href="https://github.com/iamf-a-e" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/tariro-munzwa-b57437186/" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>                        
+          </div>
+        </div>
+        
+        <div class="col-lg-4 footer-section">
+          <h5>Contact me</h5>
+          <ul class="list-unstyled contact-info">
+            <li><i class="fas fa-envelope"></i> tarirofmunzwa@gmail.com</li>
+            <li><i class="fas fa-phone"></i> +263 785 019 494</li>                        
+          </ul>
+        </div>
+      </div>
+      
+      <div class="copyright">
+        <p class="text-center mb-0 mt-4">Copyright &copy;2024. All right reserved | This portfolio is made with <span class="ti-heart" style="color:#4bff3b;"></span> by <a href="#">Tariro F. Munzwa</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts for filtering functionality -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      // Get all grid items
+      const $gridItems = $('.grid-item');
+      
+      // Filter function
+      function filterItems(category) {
+        if (category === 'all') {
+          // Show all items
+          $gridItems.removeClass('hidden').show();
+        } else {
+          // Hide all items first
+          $gridItems.addClass('hidden').hide();
+          // Show only items matching the category
+          $(`.grid-item[data-category="${category}"]`).removeClass('hidden').show();
+        }
+      }
+      
+      // Handle filter button clicks
+      $('.filterable-button .btn-theme-outline').on('click', function() {
+        // Get filter value from data-filter attribute
+        const filterValue = $(this).attr('data-filter');
+        if (!filterValue) return;
+        
+        // Update active state on buttons
+        $('.filterable-button .btn-theme-outline').removeClass('selected');
+        $(this).addClass('selected');
+        
+        // Apply the filter
+        filterItems(filterValue);
+        
+        // Reset Load More button state when filtering
+        $('#loadMoreBtn').text('Load More').prop('disabled', false).css('opacity', '1');
+        
+        // Reset the visibility count for load more
+        const visibleItems = $('.grid-item:visible');
+        visibleItems.removeClass('load-more-hidden');
+        if (visibleItems.length > 6) {
+          visibleItems.slice(6).addClass('load-more-hidden').hide();
+        }
+      });
+      
+      // Load More functionality
+      let itemsPerLoad = 3;
+      
+      $('#loadMoreBtn').on('click', function() {
+        const $visibleItems = $('.grid-item:visible');
+        const currentlyShowing = $visibleItems.filter(':not(.load-more-hidden)').length;
+        const totalVisible = $visibleItems.length;
+        
+        if (currentlyShowing < totalVisible) {
+          // Show next batch
+          $visibleItems.slice(currentlyShowing, currentlyShowing + itemsPerLoad).removeClass('load-more-hidden').show();
+        }
+        
+        const newShowingCount = $('.grid-item:visible:not(.load-more-hidden)').length;
+        if (newShowingCount >= totalVisible) {
+          $(this).text('All Loaded').prop('disabled', true).css('opacity', '0.6');
+        }
+      });
+      
+      // Initialize: show first 6 items, hide the rest
+      function initLoadMore() {
+        $('.grid-item').removeClass('load-more-hidden');
+        const $allVisible = $('.grid-item:visible');
+        if ($allVisible.length > 6) {
+          $allVisible.slice(6).addClass('load-more-hidden').hide();
+        }
+      }
+      
+      initLoadMore();
+      
+      // Re-initialize after filter to maintain load more state
+      const originalFilterItems = filterItems;
+      window.filterItems = function(category) {
+        originalFilterItems(category);
+        initLoadMore();
+      };
+      
+      // Fix for any images that might fail to load - set placeholder backgrounds
+      $('img').on('error', function() {
+        if (!$(this).hasClass('placeholder-set')) {
+          $(this).addClass('placeholder-set');
+          const bgColor = '#1e293b';
+          $(this).css('background', bgColor);
+        }
+      });
+    });
+  </script>
+
+  <!-- Simple scroll reveal animation -->
+  <script>
+    function isElementInViewport(el) {
+      const rect = el.getBoundingClientRect();
+      return rect.top <= (window.innerHeight || document.documentElement.clientHeight) * 0.85;
+    }
+    
+    function handleScrollAnimations() {
+      document.querySelectorAll('.wow').forEach(el => {
+        if (isElementInViewport(el) && !el.classList.contains('animated')) {
+          el.classList.add('fadeInUp', 'animated');
+        }
+      });
+    }
+    
+    // Initial animation trigger
+    document.querySelectorAll('.wow').forEach(el => {
+      el.classList.add('fadeInUp', 'animated');
+    });
+    
+    window.addEventListener('scroll', handleScrollAnimations);
+    handleScrollAnimations();
+  </script>
+  
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
