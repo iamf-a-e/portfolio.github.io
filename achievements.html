@@ -6,13 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Tariro F. Munzwa - Achievements</title>
 
-  <!-- Stylesheets - exact same as original portfolio -->
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/lykmapipo/themify-icons/themify-icons.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   
   <style>
-    /* ===== EXACT STYLING FROM ORIGINAL PORTFOLIO ===== */
     * {
       margin: 0;
       padding: 0;
@@ -39,7 +37,6 @@
       }
     }
 
-    /* Theme colors matching original */
     :root {
       --primary-color: #94a3b8;
       --primary-dark: #4f46e5;
@@ -102,7 +99,6 @@
       margin-bottom: 15px;
     }
 
-    /* Portfolio Grid Styles */
     .portfolio-heading {
       display: flex;
       justify-content: center;
@@ -148,10 +144,6 @@
       transition: all 0.3s ease;
     }
 
-    .grid-item.hidden {
-      display: none;
-    }
-
     .img-place {
       position: relative;
       overflow: hidden;
@@ -179,25 +171,23 @@
       transform: scale(1.05);
     }
 
+    /* Image Caption Styles - ALWAYS VISIBLE */
     .img-caption {
       position: absolute;
       bottom: 0;
       left: 0;
       right: 0;
-      background: linear-gradient(to top, rgba(0,0,0,0.85), transparent);
+      background: linear-gradient(to top, rgba(0,0,0,0.9), rgba(0,0,0,0.7), rgba(0,0,0,0.4));
       padding: 20px 15px 15px;
       color: white;
-      transform: translateY(100%);
-      transition: transform 0.3s ease;
-    }
-
-    .img-place:hover .img-caption {
-      transform: translateY(0);
+      z-index: 10;
+      pointer-events: none;
     }
 
     .img-caption h5 {
       margin-bottom: 5px;
       font-weight: 700;
+      font-size: 1rem;
     }
 
     .img-caption p {
@@ -206,7 +196,6 @@
       opacity: 0.9;
     }
 
-    /* Green Back Button */
     .back-button-container {
       padding: 30px 0 20px;
       margin-bottom: 10px;
@@ -235,196 +224,80 @@
       box-shadow: 0 8px 25px rgba(75, 255, 59, 0.5);
     }
 
-    /* Video specific */
-    .video-wrapper {
-      width: 100%;
-      height: 280px;
-      background: #000;
-    }
-
-    .video-wrapper video {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    /* Responsive */
     @media (max-width: 992px) {
-      .grid-item {
-        width: 50%;
-      }
-      .portfolio-tip-bubble {
-        white-space: normal;
-        text-align: center;
-      }
+      .grid-item { width: 50%; }
+      .portfolio-tip-bubble { white-space: normal; text-align: center; }
     }
 
     @media (max-width: 768px) {
-      .grid-item {
-        width: 100%;
-      }
-      .portfolio-heading h1 {
-        font-size: 1.8rem;
-      }
-      .filterable-button .btn {
-        font-size: 0.8rem;
-        padding: 5px 12px;
-      }
-      .img-place img,
-      .img-place video {
-        height: 220px;
-      }
-      .back-button-container {
-        padding: 20px 0 10px;
-      }
+      .grid-item { width: 100%; }
+      .portfolio-heading h1 { font-size: 1.8rem; }
+      .filterable-button .btn { font-size: 0.8rem; padding: 5px 12px; }
+      .img-place img, .img-place video { height: 220px; }
+      .back-button-container { padding: 20px 0 10px; }
     }
 
-    /* Modern Footer */
     .modern-footer {
       background: linear-gradient(135deg, #343a40 0%, #020617 100%);
       color: #f8fafc;
       padding: 3rem 0 1.5rem;
       margin-top: 60px;
-      position: relative;
     }
 
-    .footer-section {
-      margin-bottom: 1.5rem;
-    }
-
-    .footer-section h5 {
-      color: #4bff3b;
-      font-weight: 600;
-      margin-bottom: 1rem;
-    }
-
-    .footer-section a {
-      color: #94a3b8;
-      text-decoration: none;
-      transition: all 0.3s ease;
-    }
-
-    .footer-section a:hover {
-      color: #4bff3b;
-    }
-
-    .social-links {
-      display: flex;
-      gap: 15px;
-      margin-top: 1rem;
-    }
-
+    .footer-section h5 { color: #4bff3b; font-weight: 600; margin-bottom: 1rem; }
+    .footer-section a { color: #94a3b8; text-decoration: none; transition: all 0.3s ease; }
+    .footer-section a:hover { color: #4bff3b; }
+    .social-links { display: flex; gap: 15px; margin-top: 1rem; }
     .social-links a {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      background: rgba(255, 255, 255, 0.05);
-      color: #94a3b8;
+      display: flex; align-items: center; justify-content: center;
+      width: 40px; height: 40px; border-radius: 50%;
+      background: rgba(255, 255, 255, 0.05); color: #94a3b8;
       transition: all 0.3s ease;
     }
-
-    .social-links a:hover {
-      background: #4bff3b;
-      color: #000;
-      transform: translateY(-3px);
-    }
-
-    .contact-info li {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      margin-bottom: 8px;
-      color: #94a3b8;
-    }
-
-    .copyright {
-      text-align: center;
-      padding-top: 2rem;
-      margin-top: 2rem;
-      border-top: 1px solid #ffffff0d;
-      color: #94a3b8;
-    }
-
-    .copyright a {
-      color: #4bff3b;
-    }
-
-    /* Animation */
-    .wow {
-      visibility: visible !important;
-      animation-name: fadeInUp;
-    }
-
-    @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translate3d(0, 40px, 0);
-      }
-      to {
-        opacity: 1;
-        transform: translate3d(0, 0, 0);
-      }
-    }
-
-    .fadeInUp {
-      animation-name: fadeInUp;
-      animation-duration: 0.8s;
-      animation-fill-mode: both;
-    }
-
-    .text-center {
-      text-align: center;
-    }
+    .social-links a:hover { background: #4bff3b; color: #000; transform: translateY(-3px); }
+    .contact-info li { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; color: #94a3b8; }
+    .copyright { text-align: center; padding-top: 2rem; margin-top: 2rem; border-top: 1px solid #ffffff0d; color: #94a3b8; }
+    .copyright a { color: #4bff3b; }
+    .text-center { text-align: center; }
   </style>
 </head>
 <body>
 
-  <!-- Achievements Section - starts immediately -->
   <div class="vg-page page-portfolio" style="padding: 30px 0 20px;">
     <div class="container">
-
-      <!-- Green Back Button at top -->
       <div class="back-button-container">
         <a href="index.html" class="btn-back-green">
           <i class="fas fa-arrow-left"></i> Back to Portfolio
         </a>
       </div>
 
-      <!-- Portfolio Header Badge -->
-      <div class="text-center wow fadeInUp">
+      <div class="text-center">
         <div class="badge-subhead">Recognition & Impact</div>
       </div>
 
-      <!-- ACHIEVEMENTS SECTION with heading and bubble tip -->
       <div class="portfolio-heading">
-        <h1 class="text-center fw-normal wow fadeInUp" style="font-weight: 500;">See my achievements</h1>
+        <h1 class="text-center fw-normal" style="font-weight: 500;">See my achievements</h1>
         <div class="portfolio-tip-bubble">🏆 click pictures to visit achievements</div>
       </div>
 
-      <!-- Filter Buttons for Achievements -->
-      <div id="achievements-filters" class="filterable-button py-3 wow fadeInUp">
+      <div id="achievements-filters" class="filterable-button py-3">
         <button class="btn btn-theme-outline selected" data-filter="all">All</button>
         <button class="btn btn-theme-outline" data-filter="awards">Awards</button>
         <button class="btn btn-theme-outline" data-filter="publications">Publications</button>
         <button class="btn btn-theme-outline" data-filter="spotlights">Spotlights</button>
       </div>
 
-      <!-- Achievements Grid - EXACT same links and content from original portfolio -->
       <div id="achievements-grid" class="gridder my-3">
-
         <!-- Award: DS4Health Winner -->
         <div class="grid-item awards" data-category="awards">
           <div class="img-place">
             <a href="https://www.linkedin.com/posts/kmunzwa_ds4health-medsiglip-ds4health-activity-7387004899879162880-1F3M?utm_source=share" target="_blank" style="display: block; text-decoration: none;">
               <img src="DS4H.jpg" alt="DS4Health Award" onerror="this.src='https://via.placeholder.com/400x300?text=DS4Health+Winner'">
+              <div class="img-caption">
+                <h5 class="fg-theme">1st Place Winner</h5>
+                <p>Data Science for Health Ideathon 2025</p>
+              </div>
             </a>
-            <div class="img-caption">
-              <h5 class="fg-theme">1st Place Winner</h5>
-              <p>Data Science for Health Ideathon 2025</p>
-            </div>
           </div>
         </div>
 
@@ -433,11 +306,11 @@
           <div class="img-place">
             <a href="https://www.linkedin.com/posts/tariro-munzwa-b57437186_deeplearningindaba-ai-africa-activity-7363653161284177921-Wt5g" target="_blank" style="display: block; text-decoration: none;">
               <img src="panel.jpg" alt="DLI Panel" onerror="this.src='https://via.placeholder.com/400x300?text=Deep+Learning+Indaba+Panel'">
+              <div class="img-caption">
+                <h5 class="fg-theme">Panelist for AI Startups</h5>
+                <p>Deep Learning Indaba 2025</p>
+              </div>
             </a>
-            <div class="img-caption">
-              <h5 class="fg-theme">Panelist for AI Startups</h5>
-              <p>Deep Learning Indaba 2025</p>
-            </div>
           </div>
         </div>
 
@@ -446,24 +319,24 @@
           <div class="img-place">
             <a href="https://www.linkedin.com/posts/tariro-munzwa-b57437186_aiforgood-zambianai-naturallanguageprocessing-ugcPost-7366876293616824321-xnfe" target="_blank" style="display: block; text-decoration: none;">
               <img src="spotlight2.jpg" alt="AI Spotlight" onerror="this.src='https://via.placeholder.com/400x300?text=AI+Mapping+Spotlight'">
+              <div class="img-caption">
+                <h5 class="fg-theme">Featured in Spotlight Session</h5>
+                <p>AI Mapping for Zambian Languages</p>
+              </div>
             </a>
-            <div class="img-caption">
-              <h5 class="fg-theme">Featured in Spotlight Session</h5>
-              <p>AI Mapping for Zambian Languages</p>
-            </div>
           </div>
         </div>
 
         <!-- Spotlight: Deep Learning IndabaX Zambia 2025 -->
         <div class="grid-item spotlights" data-category="spotlights">
           <div class="img-place">
-            <a href="https://www.linkedin.com/posts/tariro-munzwa-b57437186_deeplearningindabax-aiforgood-healthtech-activity-7398044240028561408-QPaf?utm_source=share&utm_medium=member_desktop&rcm=ACoAACvYuLMBnomHsqE1IbR1V43InIixkr7RwBc" target="_blank" style="display: block; text-decoration: none;">
+            <a href="https://www.linkedin.com/posts/tariro-munzwa-b57437186_deeplearningindabax-aiforgood-healthtech-activity-7398044240028561408-QPaf" target="_blank" style="display: block; text-decoration: none;">
               <img src="zambiax.jpg" alt="IndabaX Zambia" onerror="this.src='https://via.placeholder.com/400x300?text=IndabaX+Zambia+2025'">
+              <div class="img-caption">
+                <h5 class="fg-theme">Deep Learning IndabaX Zambia 2025</h5>
+                <p>Taught Applied LLMs in Healthcare</p>
+              </div>
             </a>
-            <div class="img-caption">
-              <h5 class="fg-theme">Deep Learning IndabaX Zambia 2025</h5>
-              <p>Taught Applied LLMs in Healthcare</p>
-            </div>
           </div>
         </div>
 
@@ -472,38 +345,40 @@
           <div class="img-place">
             <a href="https://drive.google.com/file/d/1ybzIz6jj72SRSBha44gNsmjcZxlViO0q/view" target="_blank" style="display: block; text-decoration: none;">
               <img src="publication.png" alt="Publication" onerror="this.src='https://via.placeholder.com/400x300?text=AI+at+the+Frontlines'">
+              <div class="img-caption">
+                <h5 class="fg-theme">AI at the Frontlines</h5>
+                <p>Reproductive Health Research</p>
+              </div>
             </a>
-            <div class="img-caption">
-              <h5 class="fg-theme">AI at the Frontlines</h5>
-              <p>Reproductive Health Research</p>
-            </div>
           </div>
         </div>
 
         <!-- Spotlight: Google Research Blog Feature with Video -->
         <div class="grid-item spotlights" data-category="spotlights">
           <div class="img-place">
-            <a href="https://research.google/blog/spotlight-on-innovation-google-sponsored-data-science-for-health-ideathon-across-africa/?utm_source=linkedin&utm_medium=social&utm_campaign=social_post&utm_content=gr-acct" target="_blank" style="display: block; text-decoration: none;">
+            <a href="https://research.google/blog/spotlight-on-innovation-google-sponsored-data-science-for-health-ideathon-across-africa/" target="_blank" style="display: block; text-decoration: none;">
               <video width="100%" height="280" autoplay muted loop playsinline style="width:100%; height:280px; object-fit:cover; border-radius:8px;">
                 <source src="ideathon.mp4" type="video/mp4">
-                Your browser does not support the video tag.
               </video>
+              <div class="img-caption">
+                <h5 class="fg-theme">Featured in a Google Research Blog</h5>
+                <p>Spotlight on Innovation</p>
+              </div>
             </a>
-            <div class="img-caption">
-              <h5 class="fg-theme">Featured in a Google Research Blog</h5>
-              <p>Spotlight on Innovation</p>
-            </div>
           </div>
         </div>
+      </div>
 
-      </div><!-- End achievements grid -->
+      <div class="text-center" style="margin: 30px 0;">
+        <a href="index.html" class="btn btn-theme">Back to Home</a>
+      </div>
 
-      
-
-    </div><!-- End container -->
+      <div class="text-center mt-4">
+        <p class="text-muted"><i class="fas fa-check-circle" style="color:#4bff3b;"></i> All achievements are verified — click any card to view details</p>
+      </div>
+    </div>
   </div>
 
-  <!-- Footer -->
   <footer class="modern-footer">
     <div class="container">
       <div class="row">
@@ -513,138 +388,50 @@
             <p><i class="fas fa-map-marker-alt"></i> 707 Clee Drive, Prospect, Waterfalls, Harare</p>
           </div>
         </div>
-        
         <div class="col-lg-4 footer-section">
           <h5>Follow me</h5>
           <div class="social-links">
             <a href="https://github.com/iamf-a-e" aria-label="GitHub"><i class="fab fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/tariro-munzwa-b57437186/" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>                        
+            <a href="https://www.linkedin.com/in/tariro-munzwa-b57437186/" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
           </div>
         </div>
-        
         <div class="col-lg-4 footer-section">
           <h5>Contact me</h5>
           <ul class="list-unstyled contact-info">
             <li><i class="fas fa-envelope"></i> tarirofmunzwa@gmail.com</li>
-            <li><i class="fas fa-phone"></i> +263 785 019 494</li>                        
+            <li><i class="fas fa-phone"></i> +263 785 019 494</li>
           </ul>
         </div>
       </div>
-      
       <div class="copyright">
-        <p class="text-center mb-0 mt-4">Copyright &copy;2024. All right reserved | This portfolio is made with <span class="ti-heart" style="color:#4bff3b;"></span> by <a href="#">Tariro F. Munzwa</a></p>
+        <p class="text-center mb-0 mt-4">Copyright &copy;2024. All right reserved | Made with <span style="color:#4bff3b;">❤</span> by Tariro F. Munzwa</p>
       </div>
     </div>
   </footer>
 
-  <!-- Scripts for filtering functionality -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script>
     $(document).ready(function() {
-      // Get all grid items
-      const $gridItems = $('.grid-item');
-      
-      // Filter function
+      $('.grid-item').each(function() {
+        var $item = $(this);
+        if ($item.hasClass('awards')) $item.attr('data-category', 'awards');
+        else if ($item.hasClass('publications')) $item.attr('data-category', 'publications');
+        else if ($item.hasClass('spotlights')) $item.attr('data-category', 'spotlights');
+      });
+
       function filterItems(category) {
-        if (category === 'all') {
-          // Show all items
-          $gridItems.removeClass('hidden').show();
-        } else {
-          // Hide all items first
-          $gridItems.addClass('hidden').hide();
-          // Show only items matching the category
-          $(`.grid-item[data-category="${category}"]`).removeClass('hidden').show();
-        }
+        if (category === 'all') $('.grid-item').show();
+        else { $('.grid-item').hide(); $(`.grid-item[data-category="${category}"]`).show(); }
       }
-      
-      // Handle filter button clicks
+
       $('.filterable-button .btn-theme-outline').on('click', function() {
-        // Get filter value from data-filter attribute
-        const filterValue = $(this).attr('data-filter');
-        if (!filterValue) return;
-        
-        // Update active state on buttons
+        var filterValue = $(this).attr('data-filter');
         $('.filterable-button .btn-theme-outline').removeClass('selected');
         $(this).addClass('selected');
-        
-        // Apply the filter
         filterItems(filterValue);
-        
-        // Reset Load More button state when filtering
-        $('#loadMoreBtn').text('Load More').prop('disabled', false).css('opacity', '1');
-        
-        // Reset the visibility count for load more
-        const visibleItems = $('.grid-item:visible');
-        visibleItems.removeClass('load-more-hidden');
-        if (visibleItems.length > 6) {
-          visibleItems.slice(6).addClass('load-more-hidden').hide();
-        }
       });
-      
-      // Load More functionality
-      let itemsPerLoad = 3;
-      
-      $('#loadMoreBtn').on('click', function() {
-        const $visibleItems = $('.grid-item:visible');
-        const currentlyShowing = $visibleItems.filter(':not(.load-more-hidden)').length;
-        const totalVisible = $visibleItems.length;
-        
-        if (currentlyShowing < totalVisible) {
-          // Show next batch
-          $visibleItems.slice(currentlyShowing, currentlyShowing + itemsPerLoad).removeClass('load-more-hidden').show();
-        }
-        
-        const newShowingCount = $('.grid-item:visible:not(.load-more-hidden)').length;
-        if (newShowingCount >= totalVisible) {
-          $(this).text('All Loaded').prop('disabled', true).css('opacity', '0.6');
-        }
-      });
-      
-      // Initialize: show first 6 items, hide the rest
-      function initLoadMore() {
-        $('.grid-item').removeClass('load-more-hidden');
-        const $allVisible = $('.grid-item:visible');
-        if ($allVisible.length > 6) {
-          $allVisible.slice(6).addClass('load-more-hidden').hide();
-        }
-      }
-      
-      initLoadMore();
-      
-      // Re-initialize after filter to maintain load more state
-      const originalFilterItems = filterItems;
-      window.filterItems = function(category) {
-        originalFilterItems(category);
-        initLoadMore();
-      };
     });
   </script>
-
-  <!-- Simple scroll reveal animation -->
-  <script>
-    function isElementInViewport(el) {
-      const rect = el.getBoundingClientRect();
-      return rect.top <= (window.innerHeight || document.documentElement.clientHeight) * 0.85;
-    }
-    
-    function handleScrollAnimations() {
-      document.querySelectorAll('.wow').forEach(el => {
-        if (isElementInViewport(el) && !el.classList.contains('animated')) {
-          el.classList.add('fadeInUp', 'animated');
-        }
-      });
-    }
-    
-    // Initial animation trigger
-    document.querySelectorAll('.wow').forEach(el => {
-      el.classList.add('fadeInUp', 'animated');
-    });
-    
-    window.addEventListener('scroll', handleScrollAnimations);
-    handleScrollAnimations();
-  </script>
-  
-  <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
