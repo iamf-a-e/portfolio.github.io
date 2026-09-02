@@ -187,7 +187,34 @@
       opacity: 1;
       left: -10px;
     }
-    
+
+
+	/* Image Caption Styles - ALWAYS VISIBLE */
+    .img-caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.9), rgba(0,0,0,0.7), rgba(0,0,0,0.4));
+      padding: 20px 15px 15px;
+      color: white;
+      z-index: 10;
+      pointer-events: none;
+    }
+
+    .img-caption h5 {
+      margin-bottom: 5px;
+      font-weight: 700;
+      font-size: 1rem;
+    }
+
+    .img-caption p {
+      margin-bottom: 0;
+      font-size: 0.85rem;
+      opacity: 0.9;
+    }
+
+	  
     .contact-info li {
       display: flex;
       align-items: center;
